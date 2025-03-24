@@ -1,23 +1,29 @@
 function createTable() {
-    let table = document.getElementById("myTable");
-    table.innerHTML = ""; // Clear existing table
+    const table = document.getElementById("myTable")
+   table.innerHTML = "";
 
-    let rn = prompt("Input number of rows", 3);
-    let cn = prompt("Input number of columns", 3);
+	let row = prompt('enter the correct numbers',2);
+	let cell = prompt ('enter the correct numbers',2);
 
-    rn = parseInt(rn);
-    cn = parseInt(cn);
+	row = parsInt(row);
+	cell = parsInt(cell);
 
-    if (isNaN(rn) || isNaN(cn) || rn <= 0 || cn <= 0) {
-        alert("Please enter valid positive numbers.");
-        return;
-    }
+	if(isNaN(row)|| isNaN(cell)||row<=0||cell<=0){
+		
+		alert ("Input number of rows")
+		retrun ;
+	}
 
-    for (let i = 0; i < rn; i++) {
-        let row = table.insertRow();
-        for (let j = 0; j < cn; j++) {
-            let cell = row.insertCell();
-            cell.textContent = `Row-${i} Column-${j}`;
-        }
-    }
+	for (let p=0; p<row; p++){
+		let row = table.insertrow();
+		for (let r=0; r<cell; r++){
+			let cell = row.insertcell()
+			cell.textContent = row${i}, cell${j};
+		}
+	}
+
+	
+	
+	
+  
 }
